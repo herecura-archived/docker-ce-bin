@@ -3,13 +3,13 @@
 pkgname=docker-ce-bin
 _rpmfile=docker-engine-17.03.0.ce-1.fc25.x86_64.rpm
 pkgver=17.03.0
-pkgrel=1
+pkgrel=2
 pkgdesc='Pack, ship and run any application as a lightweight container, using official binaries'
 arch=('x86_64')
 url='https://www.docker.com/'
 license=('Apache')
 provides=('docker')
-conflicts=('docker-git')
+conflicts=('docker' 'docker-git')
 replaces=('docker-bin')
 depends=('bridge-utils' 'iproute2' 'device-mapper' 'sqlite' 'systemd' 'libseccomp' 'libtool')
 optdepends=('btrfs-progs: btrfs backend support'
