@@ -1,2 +1,3 @@
-update__rpmfile=$(curl -s https://yum.dockerproject.org/repo/main/fedora/25/Packages/ | grep 'docker-engine-[0-9].*x86_64.rpm' | tail -n1 | sed -e 's/.*\(docker-engine.*rpm\).*/\1/')
+update__rpmfile=$(curl -s https://download.docker.com/linux/fedora/25/x86_64/stable/Packages/ | grep 'docker-ce-[0-9].*x86_64.rpm' | tail -n1 | sed -e 's/.*\(docker-ce.*rpm\).*/\1/')
+echo $update__rpmfile
 update_pkgver=$(echo "$update__rpmfile" | sed -e 's/.*-\([0-9\.]*\)\.ce-.*/\1/')
