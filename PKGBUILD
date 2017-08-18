@@ -1,8 +1,8 @@
 # Maintainer: BlackIkeEagle
 
 pkgname=docker-ce-bin
-_rpmfile=docker-ce-17.06.0.ce-1.fc25.x86_64.rpm
-pkgver=17.06.0
+_rpmfile=docker-ce-17.06.1.ce-1.fc25.x86_64.rpm
+pkgver=17.06.1
 pkgrel=1
 pkgdesc='Pack, ship and run any application as a lightweight container, using official binaries'
 arch=('x86_64')
@@ -19,7 +19,7 @@ options=('!strip')
 source=(
   "https://download.docker.com/linux/fedora/25/x86_64/stable/Packages/$_rpmfile"
   "docker.sysusers")
-sha512sums=('20039a20e4b67e5cbae11b8851ccd9967f4ec74b11e20334857ba808fdd8e5484f113ce087ab9b99f925c3ebc6869c9c95b863f77ca7cf1aae2b6b18c3ee7594'
+sha512sums=('3d3cfaf5b577b83995b2f146b989dc8c0597b055130db28ddfa4d37ff632b90d966dfd18cc50af6b53b8ce4faef7a9842996ac33268ffab83d3931e432f79555'
             '5791272636736b70509ae5ddd29ba94caba52ba7cc90190e20b867d926a47f1fd062fe8c00cb5585e4def39814bfc7a2d5d191fed46b26847b0206f65647309d')
 
 package() {
