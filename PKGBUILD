@@ -3,7 +3,7 @@
 pkgname=docker-ce-bin
 _rpmfile=docker-ce-17.06.2.ce-1.fc25.x86_64.rpm
 pkgver=17.06.2
-pkgrel=1
+pkgrel=2
 pkgdesc='Pack, ship and run any application as a lightweight container, using official binaries'
 arch=('x86_64')
 url='https://www.docker.com/'
@@ -25,6 +25,8 @@ sha512sums=('f3a47cba26a6f1c6b104cfc0198b6b35ef6d7a425dc6ca148d2c1c87dd84bdfaf18
 package() {
   cp -a {etc,usr} "$pkgdir"
   mv "$pkgdir/usr/share/zsh/"{vendor-completions,site-functions}
+  install -Dm644 "$srcdir/docker.sysusers" \
+    "$pkgdir/usr/lib/sysusers.d/docker.conf"
 }
 
 # vim:set ts=2 sw=2 et:
