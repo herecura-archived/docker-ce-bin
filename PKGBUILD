@@ -1,8 +1,8 @@
 # Maintainer: BlackIkeEagle
 
 pkgname=docker-ce-bin
-_rpmfile=docker-ce-17.09.1.ce-1.fc25.x86_64.rpm
-pkgver=17.09.1
+_rpmfile=docker-ce-18.03.1.ce-1.fc27.x86_64.rpm
+pkgver=18.03.1
 pkgrel=1
 pkgdesc='Pack, ship and run any application as a lightweight container, using official binaries'
 arch=('x86_64')
@@ -17,9 +17,9 @@ optdepends=('btrfs-progs: btrfs backend support'
 # don't strip binaries! A sha1 is used to check binary consistency.
 options=('!strip')
 source=(
-  "https://download.docker.com/linux/fedora/25/x86_64/stable/Packages/$_rpmfile"
+  "https://download.docker.com/linux/fedora/27/x86_64/stable/Packages/$_rpmfile"
   "docker.sysusers")
-sha512sums=('9203a5cc93e96a72bfdfbdce9fc1d27f0fda27c88a58e2202ded16bf60cb64535fb8ee38840e75f10f38089f5704b484b38c231231edfba2c7ef73b0ef778c62'
+sha512sums=('e2b8dc72c00a7a35a8a072d40360ae53d1780b87e646ba19ab89185014510999498daab30cf757e0b1bd8c7de7280a376ecee8e134bab43cb1c030c9fef45bce'
             '5791272636736b70509ae5ddd29ba94caba52ba7cc90190e20b867d926a47f1fd062fe8c00cb5585e4def39814bfc7a2d5d191fed46b26847b0206f65647309d')
 
 package() {
